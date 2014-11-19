@@ -53,8 +53,6 @@ class GenerateCommand(sublime_plugin.WindowCommand):
                 self.args[-1] += '%s' % value
             else:
                 self.args.append(value)
-             if self.command == 'resource':
-                self.args.append('-n')
             if os.name != 'posix':
                 self.args = subprocess.list2cmdline(self.args)
             try:
